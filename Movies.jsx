@@ -64,19 +64,7 @@ export default function Movies() {
       return (
         <>
           <div className="float-header">
-          <div className="searchbar-container" >
-            <form className="query-form">
-              <input 
-                name='search'  
-                type="text"
-                id="query"
-                placeholder="Search Movies..."
-                />
-            </form>
-            <div className="search-icon small"> 
-              <BiSearch />
-            </div>
-          </div>
+            <Header />
           </div>
           <div className="showcase">
             <Carousel
