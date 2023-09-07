@@ -63,9 +63,14 @@ export default function Movies() {
     function Show() {
       return (
         <>
-          <div className="float-header">
-            <Header />
-          </div>
+          <form className="query-form">
+          <input 
+            name='search'  
+            type="text"
+            id="query"
+            placeholder="Search Movies..."
+            />
+        </form>
           <div className="showcase">
             <Carousel
               showThumbs={false}
