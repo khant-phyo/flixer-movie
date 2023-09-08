@@ -15,7 +15,7 @@ export default function Movies() {
   const [queryList1, setQueryList1] = useState([])
   const [queryList2, setQueryList2] = useState([])
   const [searchParams, setSearchParams] = useSearchParams()
-  const query = searchParams.get('/searches?search')
+  const query = searchParams.get('search')
 
   useEffect(() => {
     fetch('https://api.themoviedb.org/3/movie/popular?api_key=a184eba0a75557cbe179b933b4bceae0&language=en-US&page=1&include_adult=false')
