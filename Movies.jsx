@@ -124,6 +124,7 @@ export default function Movies() {
   return (
     <>
       <Show/>
+      {query ?  <h1>theres query</h1> : <h1>noquery</h1>}
       <div className="recommended">
         <div className="icon">
           <BsFillPlayFill/>
@@ -142,7 +143,6 @@ export default function Movies() {
       <div className="pop-movies-container">
         {boxes3}
       </div>
-      <h2>{query}</h2>
     </>
   )
 }
