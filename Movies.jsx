@@ -142,6 +142,7 @@ export default function Movies() {
       <div className="pop-movies-container">
         {boxes3}
       </div>
+      <h2>{query}</h2>
     </>
   )
 }
