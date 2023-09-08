@@ -54,7 +54,7 @@ export default function Movies() {
     }
   }, [query])
   
-  if (queryList1.length != 0 && queryList2.length != 0) {
+  if (query) {
     return (
       <Navigate to='/' state={{queryList1, queryList2, resultFor: query}}/>
     )
