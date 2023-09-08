@@ -63,9 +63,14 @@ export default function Movies() {
     function Show() {
       return (
         <>
-          <div className="float-header">
-            <Header />
-          </div>
+          <form className="query-form">
+            <input 
+              name='search'  
+              type="text"
+              id="query"
+              placeholder="Search Movies..."
+              />
+          </form>
           <div className="showcase">
             <Carousel
               showThumbs={false}
@@ -124,7 +129,6 @@ export default function Movies() {
   return (
     <>
       <Show/>
-      {query ?  <h1>theres query</h1> : <h1>noquery</h1>}
       <div className="recommended">
         <div className="icon">
           <BsFillPlayFill/>
