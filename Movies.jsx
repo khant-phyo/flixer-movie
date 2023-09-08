@@ -56,7 +56,7 @@ export default function Movies() {
   
   if (queryList1.length != 0 && queryList2.length != 0) {
     return (
-      <Navigate to='/searches' state={{queryList1, queryList2, resultFor: query}}/>
+      <Navigate to='/' state={{queryList1, queryList2, resultFor: query}}/>
     )
   }
 

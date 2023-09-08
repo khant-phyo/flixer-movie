@@ -2,36 +2,37 @@ import React, { useState }  from "react"
 import { BiSearch, BiRightArrowAlt } from "react-icons/bi";
 import { NavLink, useSearchParams } from "react-router-dom";
 
-function toggleSearchBar() {
-  if (window.screen.width <= 700){
-    setSearchBar(prevVal => !prevVal)
-  }
-  else {
-    setSearchBar(false)
-  }
-}
-
-
-function SearchBar() {
-  return (
-    <div className="searchbar-container" >
-      <form className="query-form">
-        <input 
-          name='search'  
-          type="text"
-          id="query"
-          placeholder="Search Movies..."
-          />
-      </form>
-      <div className="search-icon small"> 
-        <BiSearch />
-      </div>
-    </div>
-  )
-}
 
 export default function Header() {
   const [searchBar, setSearchBar] = useState(false)
+ 
+  function toggleSearchBar() {
+    if (window.screen.width <= 700){
+      setSearchBar(prevVal => !prevVal)
+    }
+    else {
+      setSearchBar(false)
+    }
+  }
+
+
+  function SearchBar() {
+    return (
+      <div className="searchbar-container" >
+        <form className="query-form">
+          <input 
+            name='search'  
+            type="text"
+            id="query"
+            placeholder="Search Movies..."
+            />
+        </form>
+        <div className="search-icon small"> 
+          <BiSearch />
+        </div>
+      </div>
+    )
+  }
 
   return (
     <>
