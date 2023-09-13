@@ -25,6 +25,10 @@ export default function Header() {
     setInput({[e.target.name]: e.target.value})
   }
 
+  function handleSubmit(e) {
+    setSearchParams(input['search'])
+  }
+
   function SearchBar() {
     return (
       <div className="searchbar-container" >
