@@ -26,7 +26,7 @@ export default function Header() {
   }
 
   function handleSubmit(e) {
-    setSearchParams({'search': 'this is it'})
+    setSearchParams({'search': input['search']})
   }
 
   function SearchBar() {
