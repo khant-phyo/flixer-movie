@@ -40,6 +40,7 @@ export default function Header() {
             placeholder="Search Movies..."
             onChange={handleChange}
             value={input['search']}
+            autoFocus
             />
         </form>
         <div className="search-icon small"> 
