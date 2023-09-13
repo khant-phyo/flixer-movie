@@ -4,7 +4,13 @@ import { NavLink, useSearchParams } from "react-router-dom";
 
 
 export default function Header() {
+  const [input, setInput] = useState({
+    'search': ''
+  })
   const [searchBar, setSearchBar] = useState(false)
+  const [searchParams, setSearchParams] = useSearchParams()
+  const query = searchParams.get('search')
+
  
   function toggleSearchBar() {
     if (window.screen.width <= 700){
@@ -15,16 +21,21 @@ export default function Header() {
     }
   }
 
+  function handleChange(e){
+    setInput({[e.target.name]: e.target.value})
+  }
 
   function SearchBar() {
     return (
       <div className="searchbar-container" >
-        <form className="query-form">
+        <form className="query-form" onSubmit={handleSubmit}>
           <input 
             name='search'  
             type="text"
             id="query"
             placeholder="Search Movies..."
+            onChange={handleChange}
+            value={input['search']}
             />
         </form>
         <div className="search-icon small"> 
